@@ -1,5 +1,5 @@
 void call() {
-  stage('NPM: Test'){
+  stage('NPM: Lint'){
     docker.image("node:${node_version}").inside {
       sh 'npm run lint'
     }
