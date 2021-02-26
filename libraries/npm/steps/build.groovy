@@ -1,5 +1,7 @@
-void call(){
-    stage("NPM: Build"){
-        println "build from NPM"
+void call() {
+  stage('NPM: Test'){
+    docker.image("node:${node_version}").inside {
+      sh 'npm run build'
     }
+  }
 }
