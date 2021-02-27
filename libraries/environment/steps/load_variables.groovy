@@ -2,8 +2,10 @@
 void call() {
   echo 'AQUIIIIIIIIIIIIIIIIIIIIII'
   stage('Load environment variables') {
-    script {
-      load "${config.env_path}"
+    steps {
+      script {
+        load "${config.env_path}"
+      }
     }
   }
 }
