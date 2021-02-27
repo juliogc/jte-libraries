@@ -7,7 +7,7 @@ void call() {
     
     // Override DATABASE_URL once we need dynamicaly update it
     // between jobs executions to avoid container conflicts
-    postgresContainer = "postgres-${networkId}"
+    String postgresContainer = "postgres-${networkId}"
     env.DATABASE_URL = "postgresql://postgres:postgres@${postgresContainer}:5432/postgres"
     
     stage('NPM: Test'){
